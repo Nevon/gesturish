@@ -40,9 +40,9 @@ module.exports = {
   },
   browserify: {
     bundleConfigs: [{
-      entries: src + '/javascript/global.coffee',
+      entries: src + '/javascript/entry.coffee',
       dest: dest,
-      outputName: 'global.js',
+      outputName: 'app.js',
       extensions: ['.coffee', '.hbs']
     }]
   },

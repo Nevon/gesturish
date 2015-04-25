@@ -2,10 +2,7 @@
   "name": "gesturish-app",
   "version": "0.0.1",
   "description": "",
-  "browser": {
-    "underscore": "backbone/node_modules/underscore",
-    "plugin": "./src/javascript/vendor/jquery-plugin.js"
-  },
+  "browser": {},
   "browserify": {
     "transform": [
       "browserify-shim",
@@ -13,14 +10,7 @@
       "hbsfy"
     ]
   },
-  "browserify-shim": {
-    "plugin": {
-      "exports": "plugin",
-      "depends": [
-        "jquery:$"
-      ]
-    }
-  },
+  "browserify-shim": {},
   "devDependencies": {
     "browser-sync": "~2.2.2",
     "browserify": "^9.0.3",
