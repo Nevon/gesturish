@@ -103,30 +103,36 @@ describe 'App', ->
 			fixture = 
 				get: ->
 					set: spy
-				on: ->
-				DIRECTION_ALL: 1
+				on: (->)
+			config =
+				direction: 30
+				velocity: .1
 
 			# when
-			app.initTouchHandling fixture, {}, (->)
+			app.initTouchHandling fixture, config, {}, (->)
 
 			# then
-			expect(spy.calledWithExactly(direction: 1)).to.equal true
+			expect(spy.calledWithExactly(config)).to.equal true
 
 		it 'should listen for all specified events', ->
 			# given
 			spy = sinon.spy()
+			
 			fixture = 
 				get: ->
 					set: (->)
 				on: spy
-				DIRECTION_ALL: 1
-			events = {
+
+			config =
+				direction: 30
+				velocity: .1
+			
+			events =
 				foo: 'foo',
 				bar: 'bar'
-			}
 
 			# when
-			app.initTouchHandling fixture, events, (->)
+			app.initTouchHandling fixture, config, events, (->)
 
 			# then
 			expect(spy.calledWith('foo bar')).to.equal true

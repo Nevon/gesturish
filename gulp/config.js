@@ -12,7 +12,8 @@ module.exports = {
     dest: dest,
     settings: {
       indentedSyntax: false,
-      imagePath: 'images'
+      imagePath: 'images',
+      includePaths: [src + '/sass']
     }
   },
   images: {

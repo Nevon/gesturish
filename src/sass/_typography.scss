@@ -1,18 +1,16 @@
+$serif-stack: Georgia, Cambria, "Times New Roman", Times, serif;
+$sans-serif-stack: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+
 body {
   @include font-smoothing;
-  color: #555;
-  font-family: sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: $serif-stack;
+  font-size: 20px;
+  line-height: 1.5em;
 }
 
-small {
-  font-weight: normal;
-  display: block;
-  font-size: 14px;
-}
-
-code {
-  background-color: lightgrey;
-  border-radius: 3px;
-  font-family: monospace;
-  padding: 0 .5em;
+a {
+  color: #57ad68;
+  text-decoration: none;
 }

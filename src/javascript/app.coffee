@@ -8,7 +8,12 @@ class App
 
 		@createListeners()
 
-		@initTouchHandling(new Hammer(@toucharea), TouchEvents, @_onTouchAction)
+		@initTouchHandling(
+			new Hammer(@toucharea),
+			{ direction: Hammer.DIRECTION_ALL, velocity: .1 }
+			TouchEvents, 
+			@_onTouchAction
+		)
 
 		@initKeyboardHandling()
 
@@ -18,9 +23,9 @@ class App
 		@gesturish.on 'delete', @_handleDeleteCommand
 			
 
-	initTouchHandling: (hammerInstance, events, callback) ->
+	initTouchHandling: (hammerInstance, config, events, callback) ->
 		@mc = hammerInstance
-		@mc.get('swipe').set direction: @mc.DIRECTION_ALL
+		@mc.get('swipe').set config
 
 		@mc.on (events[e] for e in Object.keys(events)).join(' '), (e) =>
 			callback.call @, e

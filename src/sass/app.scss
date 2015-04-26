@@ -1,6 +1,7 @@
 @import './scss-mixins';
 @import './typography';
 @import './icons';
+@import './animation';
 
 * {
 	box-sizing: border-box;
@@ -14,14 +15,42 @@ body {
 }
 
 body {
-	padding: 0 20px 20px;
+	padding: 20px 20px;
 	overflow-y: hidden;
+	text-align: center;
 }
 
 .wrapper {
 	width: 100%;
 	height: 100%;
+}
+
+#output {
 	position: relative;
+	top: 15%;
+	@include animation(fadeIn 750ms ease-in);
+}
+
+.credits {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 10px;
+	font-size: 11px;
+	color: rgba(0, 0, 0, 0.3);
+	font-weight: normal;
+	text-align: left;
+	line-height: 2em;
+	font-family: $sans-serif-stack;
+	text-align: center;
+
+	@include animation(fadeIn 1.75s ease-in, slideUp 1.2s ease-in);
+
+	a {
+		color: rgba(0,0,0,0.4);
+		text-decoration: underline;
+	}
 }
 
 #toucharea {
@@ -30,14 +59,4 @@ body {
 	height: 100%;
 	top: 0;
 	left: 0;
-}
-
-#output {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	border: 0;
-	font-family: monospace;
-	font-size: 2rem;
 }
