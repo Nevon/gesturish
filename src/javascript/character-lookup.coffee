@@ -19,5 +19,5 @@ charTable =
 	EIGHT: '8'
 	NINE: '9'
 
-module.exports = (charToken) ->
+module.exports.translate = (charToken) ->
 	if charTable[charToken] then charTable[charToken] else charToken 
