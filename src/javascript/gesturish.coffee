@@ -35,7 +35,7 @@ class Gesturish extends EventEmitter
 				{ name: TouchEvents.down,  from: 's',  to: 'v' },
 				{ name: TouchEvents.down,  from: 'h',  to: 'w' },
 				{ name: TouchEvents.right,  from: 'u',  to: 'x' },
-				{ name: TouchEvents.right,  from: 'l',  to: 'y' },
+				{ name: TouchEvents.up,  from: 'e',  to: 'y' },
 				{ name: TouchEvents.right,  from: 't',  to: 'z' },
 				{ name: TouchEvents.tap,  from: 'e',  to: 'PERIOD' },
 				{ name: TouchEvents.tap,  from: 'PERIOD',  to: 'COMMA' },
