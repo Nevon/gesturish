@@ -66,7 +66,7 @@ After inputting the sequence for a letter (for example `↓` for `a`), you swipe
 | ↓→↓        | v                     |
 | ↓↓↓        | w                     |
 | ↓↑→        | x                     |
-| ↑→→        | y                     |
+| →↑         | y                     |
 | →↓→        | z                     |
 | →∘         | .                     |
 | →∘∘        | ,                     |
